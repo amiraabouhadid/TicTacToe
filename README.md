@@ -2,7 +2,7 @@
 
 # RUBY PROJECT 3: TIC TAC TOE
 
-We were asked to create a Tic-Tac-Toe game. You can find more information on the game [@here] (https://en.wikipedia.org/wiki/Tic-tac-toe).
+We were asked to create a Tic-Tac-Toe game. You can find more information on the game here (https://en.wikipedia.org/wiki/Tic-tac-toe).
 
 ## Built With
 
