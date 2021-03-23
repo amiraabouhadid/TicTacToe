@@ -47,9 +47,9 @@ Clone repository from github to your local drive by following these steps:
 
 👤 MARIJAN BRVAR
 
-- GitHub:
-- Twitter:
-- LinkedIn:
+- GitHub: [@githubhandle](https://github.com/marijanbrvar)
+- Twitter: [@twitterhandle](https://twitter.com/marijanbrvar)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/marijanbrvar)
 
 ## 🤝 Contributing
 
