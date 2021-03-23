@@ -1,3 +1,7 @@
 #!/usr/bin/env ruby
+player = Player.new
+puts player.welcome
 
-puts 'Hello world!'
+def players(token, player)
+  state
+end

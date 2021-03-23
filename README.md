@@ -48,11 +48,6 @@ Clone repository from github to your local drive by following these steps:
 - Twitter: [@AbouhadidAmira](https://twitter.com/AbouhadidAmira)
 - LinkedIn: [amira-abouhadid](https://linkedin.com/amira-abouhadid)
 
-👤 MARIJAN BRVAR
-
-- GitHub: [@marijanbrvar](https://github.com/marijanbrvar)
-- Twitter: [@marijanbrvar](https://twitter.com/marijanbrvar)
-- LinkedIn: [marijanbrvar](https://linkedin.com/in/marijanbrvar)
 
 ## 🤝 Contributing
 
