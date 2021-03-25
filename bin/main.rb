@@ -103,6 +103,7 @@ class TicGame
     puts 'Welcome to Ruby\'s Tic Tac Toe!'
     player1 = Player.new(name('X'))
     player2 = Player.new(name('O'))
+    puts "#{player1.name} will play with X and #{player2.name} will play with O"
     @game = Game.new(player1, player2)
     game_round
   end
