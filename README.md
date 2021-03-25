@@ -3,6 +3,9 @@
 # RUBY PROJECT 3: TIC TAC TOE
 
 We were asked to create a Tic-Tac-Toe game. You can find more information on the game here (https://en.wikipedia.org/wiki/Tic-tac-toe).
+![tictactoe1](https://user-images.githubusercontent.com/56790126/112529299-c7731a00-8dad-11eb-95b4-b5dfcb8c36dc.png)
+![tictactoe2](https://user-images.githubusercontent.com/56790126/112529359-dbb71700-8dad-11eb-95e1-fb7f4edcd8ca.png)
+![tictactoe3](https://user-images.githubusercontent.com/56790126/112529393-e4a7e880-8dad-11eb-804b-542fce1ec9b2.png)
 
 ## Built With
 - Ruby
