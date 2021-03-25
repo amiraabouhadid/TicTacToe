@@ -45,10 +45,6 @@ class Game
   def turn
     puts "It's #{assign_current_player.name}'s turn"
   end
-
-  def win
-    false
-  end
 end
 
 class TicGame
