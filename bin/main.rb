@@ -11,51 +11,74 @@ class Board
   def initialize
     @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
   end
+
+  def show
+    puts '+---+---+---+'
+    puts '| 1 | 2 | 3 |'
+    puts '+---+---+---+'
+    puts '| 4 | 5 | 6 |'
+    puts '+---+---+---+'
+    puts '| 7 | 8 | 9 |'
+    puts '+---+---+---+'
+  end
 end
 
 class Game
   attr_reader :current_player
 
   def initialize(player1, player2)
-    puts 'Welcome to Ruby\'s Tic Tac Toe'
-    @board = Board.new
     @player1 = player1
     @player2 = player2
+  end
+
+  def assign_current_player
+    @current_player = case @current_player
+                      when @player1
+                        @player2
+                      when @player2
+                        @player1
+                      else
+                        @player1
+                      end
+  end
+
+  def show_turn
+    "It's #{@current_player.name}'s turn"
+  end
+
+  def turn_count
+    count = 0
+    count += 1
+    count
+  end
+
+  def win
+    false
   end
 end
 
 class TicGame
-  def name(player)
-    puts 'Enter player name :'
+  def initialize
+    @board = Board.new
+    @board.show
+    puts 'Welcome to Ruby\'s Tic Tac Toe!'
+    player1 = Player.new(name('X'))
+    player2 = Player.new(name('O'))
+    @game = Game.new(player1, player2)
+    game_round
+  end
+
+  def name(token)
+    puts 'Please enter player name:'
     name = gets.chomp
-    name(player) if name.empty?
-    name
+    name(token) if name.empty?
   end
 
   def game_round
-    loop do
-      puts "It's #{@game.current_player}'s turn!'"
-      puts @game.turn
-      puts @game.board
-      player_input
-      if @game.end?
-        puts @game.game_over(@game.end)
-      else
-        puts @game.game_over(nil)
-      end
-      puts @game.board
-    end
-  end
+    @game.assign_current_player
+    puts @game.show_turn
 
-  def player_input
-    puts "#{@game.current_player.name}, select a position 1-9:"
-    position = gets.chomp.to_i - 1
-    if @game.valid_move?(position)
-      @game.move(position)
-    else
-      puts 'Invalid move, please enter a valid position.'
-      player_input
-    end
+    # while @game.turn_count <= 9 || @game.win
   end
 end
 
