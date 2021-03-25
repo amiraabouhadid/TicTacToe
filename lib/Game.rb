@@ -25,9 +25,9 @@ class Game
   def move(position)
     case @current_player
     when @player1
-      @board.add('X', position)
+      @board.replace('X', position)
     when @player2
-      @board.add('O', position)
+      @board.replace('O', position)
     end
   end
 

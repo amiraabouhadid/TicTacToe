@@ -2,16 +2,16 @@ class Board
   attr_reader :position
 
   def initialize
-    @board = Array.new(9, '')
+    @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]].flatten
   end
 
   def show
     '+---+---+---+'\
-    '| 1 | 2 | 3 |'\
+    '| #{@board[0]} | #{@board[1]} | #{@board[2]} |'\
     '+---+---+---+'\
-    '| 4 | 5 | 6 |'\
+    '| #{@board[3]} | #{@board[4]} | #{@board[5]} |'\
     '+---+---+---+'\
-    '| 7 | 8 | 9 |'\
+    '| #{@board[6]} | #{@board[7]} | #{@board[8]} |'\
     '+---+---+---+'
   end
 
@@ -19,7 +19,7 @@ class Board
     @board[position] == 'X' || @board[position] == 'O'
   end
 
-  def add(token, position)
+  def replace(token, position)
     @board[position] = token
   end
 
