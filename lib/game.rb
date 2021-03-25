@@ -32,7 +32,7 @@ class Game
   end
 
   def turn
-    "It's #{@current_player.name}'s turn!"\
+    "It's #{@current_player.name}'s turn!\n"\
     "#{@current_player.name}, select a position 1-9:"\
   end
 
@@ -49,6 +49,10 @@ class Game
 
     arr.each_slice(3).to_a.each { |n| return @current_player if [%w[X X X], %w[O O O]].include?(n) }
     nil
+  end
+
+  def board_update
+    @board.show
   end
 
   def game_over(result)

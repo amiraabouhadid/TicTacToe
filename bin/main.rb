@@ -30,15 +30,17 @@ class TicGame
   def game_round
     loop do
       @board = Board.new
-      puts @board.show
+      puts @game.board_update
       @game.assign_current_player
       puts @game.turn
       @game.count
       select_position
       if @game.winner
+        puts @game.board_update
         puts @game.game_over(@game.winner)
         exit
       elsif @game.count == 9
+        puts @game.board_update
         puts @game.game_over(nil)
         exit
       end
