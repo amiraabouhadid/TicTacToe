@@ -48,7 +48,12 @@ class TicGame
   end
 
   def select_position
-    position = gets.chomp.to_i - 1
+    input = gets.chomp.to_i
+    position = if input.digits.length == 1
+                 input - 1
+               else
+                 input
+               end
     if @game.valid_move?(position)
       @game.move(position)
     else
