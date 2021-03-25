@@ -2,13 +2,13 @@
 
 class Game
   def initialize
-    player1 = Player.new(player_name('X'))
-    player2 = Player.new(player_name('O'))
+    player1 = Player.new(name('X'))
+    player2 = Player.new(name('O'))
     @game = Game.new(player1, player2)
     game_round
   end
 
-  def player_name(player)
+  def name(player)
     puts 'Enter player name :'
     name = gets.chomp
     name(player) if name.empty?
