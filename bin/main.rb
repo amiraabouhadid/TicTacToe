@@ -58,7 +58,7 @@ class Game
   end
 
   def valid_move?(position)
-    !@board.position_filled?(position) && position.positive? && position <= 9
+    !@board.position_filled?(position) && position >= 0 && position <= 9
   end
 
   def move(position)
@@ -131,6 +131,7 @@ class TicGame
         exit
       end
     end
+    reset
     # while @game.turn_count <= 9 || @game.win
   end
 
