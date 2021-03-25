@@ -2,7 +2,7 @@
 class TicGame
   def initialize
     @board = Board.new
-    @board.show
+    puts @board.show
     puts 'Welcome to Ruby\'s Tic Tac Toe!'
     player1 = Player.new(name('X'))
     player2 = Player.new(name('O'))
@@ -26,18 +26,18 @@ class TicGame
   def game_round
     loop do
       @board = Board.new
-      @board.show
+      puts @board.show
       @game.assign_current_player
-      @game.turn
+      puts @game.turn
       @game.count
       select_position
       if @game.winner
-        @game.game_over(@game.winner)
-        @board.show
+        puts @game.game_over(@game.winner)
+        puts @board.show
         exit
       elsif @game.count == 9
-        @game.game_over(nil)
-        @board.show
+        puts @game.game_over(nil)
+        puts @board.show
         exit
       end
     end

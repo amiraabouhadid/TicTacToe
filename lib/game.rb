@@ -32,8 +32,8 @@ class Game
   end
 
   def turn
-    puts "It's #{@current_player.name}'s turn!"
-    puts "#{@current_player.name}, select a position 1-9:"
+    "It's #{@current_player.name}'s turn!"\
+    "#{@current_player.name}, select a position 1-9:"\
   end
 
   def count
@@ -54,9 +54,9 @@ class Game
   def game_over(result)
     case result
     when nil
-      puts "It's a TIE"
+      "It's a TIE"\
     else
-      puts "#{@current_player.name} wins, GAME OVER"
+      "#{@current_player.name} wins, GAME OVER"\
     end
   end
 end
