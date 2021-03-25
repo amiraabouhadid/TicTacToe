@@ -132,7 +132,6 @@ class TicGame
       end
     end
     reset
-    # while @game.turn_count <= 9 || @game.win
   end
 
   def select_position
