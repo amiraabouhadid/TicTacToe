@@ -5,8 +5,15 @@
 We were asked to create a Tic-Tac-Toe game. You can find more information on the game here (https://en.wikipedia.org/wiki/Tic-tac-toe).
 
 ## Built With
-
 - Ruby
+
+## Game Flow
+- The players will first be welcomed into the Tic Tac Toe.
+- The first player will be asked to input his/her token which is either an X or an O.
+- The second player will be assigned the other token.
+- Each player, during their respective turns indicated by a prompt with their name, will then be asked to enter the unfilled position at which they want to enter their tokens by entering a number from 1-9.
+- An invalid move will be flagged and the player will be notified.
+- When either player wins or it's a tie, GAME OVER is displayed and the game is reset.
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
@@ -33,10 +40,6 @@ Clone repository from github to your local drive by following these steps:
 - Install Atom or Microsoft Visual Studio text editor to view the code on your local machine.
 - Install Git.
 
-### Deployment
-- Open live-server from your text-editor to see the website.
-- Use github pages to view from the Live Demo link above.
-
 ## Authors
 
 👤 AMIRA ABOUHADID
@@ -45,11 +48,6 @@ Clone repository from github to your local drive by following these steps:
 - Twitter: [@AbouhadidAmira](https://twitter.com/AbouhadidAmira)
 - LinkedIn: [amira-abouhadid](https://linkedin.com/amira-abouhadid)
 
-👤 MARIJAN BRVAR
-
-- GitHub: [@githubhandle](https://github.com/marijanbrvar)
-- Twitter: [@twitterhandle](https://twitter.com/marijanbrvar)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/marijanbrvar)
 
 ## 🤝 Contributing
 
