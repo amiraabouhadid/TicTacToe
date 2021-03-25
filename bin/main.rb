@@ -28,6 +28,7 @@ class Game
         puts @game.game_over(nil)
       end
       puts @game.board
+      exit
     end
   end
 
