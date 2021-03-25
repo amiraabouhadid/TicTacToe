@@ -71,9 +71,13 @@ class Game
   end
 
   def turn
-    count = 0
     puts "It's #{@current_player.name}'s turn!"
-    count += 1
+    puts "#{@current_player.name}, select a position 1-9:"
+  end
+
+  def count
+    count = 0
+    @board.data.each { |n| count += 1 if %w[X O].include?(n) }
     count
   end
 
@@ -109,7 +113,12 @@ class TicGame
   end
 
   def name(token)
-    puts 'Please enter player name:'
+    case token
+    when 'X'
+      puts 'First player, please enter your name:'
+    when 'O'
+      puts 'Second player, please enter your name:'
+    end
     name = gets.chomp
     name(token) if name.empty?
     name
@@ -121,12 +130,13 @@ class TicGame
       @board.show
       @game.assign_current_player
       @game.turn
+      @game.count
       select_position
       if @game.winner
         @game.game_over(@game.winner)
         @board.show
         exit
-      elsif @game.turn == 9
+      elsif @game.count == 9
         @game.game_over(nil)
         @board.show
         exit
@@ -136,7 +146,6 @@ class TicGame
   end
 
   def select_position
-    puts "#{@game.assign_current_player.name}, select a position 1-9:"
     position = gets.chomp.to_i - 1
     if @game.valid_move?(position)
       @game.move(position)
