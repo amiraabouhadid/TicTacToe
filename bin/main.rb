@@ -42,14 +42,8 @@ class Game
                       end
   end
 
-  def show_turn
+  def turn
     puts "It's #{assign_current_player.name}'s turn"
-  end
-
-  def turn_count
-    count = 0
-    count += 1
-    count
   end
 
   def win
@@ -76,7 +70,7 @@ class TicGame
 
   def game_round
     @game.assign_current_player
-    puts @game.show_turn
+    @game.turn
 
     # while @game.turn_count <= 9 || @game.win
   end
