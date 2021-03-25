@@ -43,7 +43,7 @@ class Game
   end
 
   def show_turn
-    "It's #{@current_player.name}'s turn"
+    puts "It's #{assign_current_player.name}'s turn"
   end
 
   def turn_count
