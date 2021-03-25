@@ -37,15 +37,12 @@ class TicGame
       select_position
       if @game.winner
         puts @game.game_over(@game.winner)
-        puts @board.show
         exit
       elsif @game.count == 9
         puts @game.game_over(nil)
-        puts @board.show
         exit
       end
     end
-    reset
   end
 
   def select_position
