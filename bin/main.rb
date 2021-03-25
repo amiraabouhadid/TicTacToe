@@ -33,7 +33,7 @@ class Game
 
   def player_input
     puts "#{@game.current_player.name}, select a position 1-9:"
-    position = gets.chomp.to_i(-1)
+    position = gets.chomp.to_i - 1
     if @game.valid_move?(position)
       @game.move(position)
     else
