@@ -8,8 +8,10 @@ class Player
 end
 
 class Board
+  attr_reader :position
+
   def initialize
-    @board = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    @board = Array.new(9, '')
   end
 
   def show
@@ -21,6 +23,18 @@ class Board
     puts '| 7 | 8 | 9 |'
     puts '+---+---+---+'
   end
+
+  def position_filled?(position)
+    @board[position] == 'X' || @board[position] == 'O'
+  end
+
+  def add(token, position)
+    @board[position] = token
+  end
+
+  def data
+    @board
+  end
 end
 
 class Game
@@ -29,6 +43,7 @@ class Game
   def initialize(player1, player2)
     @player1 = player1
     @player2 = player2
+    @board = Board.new
   end
 
   def assign_current_player
@@ -42,8 +57,42 @@ class Game
                       end
   end
 
+  def valid_move?(position)
+    !@board.position_filled?(position) && position.positive? && position <= 9
+  end
+
+  def move(position)
+    case @current_player
+    when @player1
+      @board.add('X', position)
+    when @player2
+      @board.add('O', position)
+    end
+  end
+
   def turn
-    puts "It's #{assign_current_player.name}'s turn"
+    count = 0
+    puts "It's #{@current_player.name}'s turn!"
+    count += 1
+    count
+  end
+
+  def winner
+    arr = []
+    [[0, 1, 2], [0, 3, 6], [0, 4, 8], [3, 4, 5], [1, 4, 7],
+     [2, 4, 6], [6, 7, 8], [2, 5, 8]].flatten.each { |n| arr.push(@board.data[n]) }
+
+    arr.each_slice(3).to_a.each { |n| return @current_player if [%w[X X X], %w[O O O]].include?(n) }
+    nil
+  end
+
+  def game_over(result)
+    case result
+    when nil
+      puts "It's a TIE"
+    else
+      puts "#{@current_player.name} wins, GAME OVER"
+    end
   end
 end
 
@@ -62,13 +111,38 @@ class TicGame
     puts 'Please enter player name:'
     name = gets.chomp
     name(token) if name.empty?
+    name
   end
 
   def game_round
-    @game.assign_current_player
-    @game.turn
-
+    loop do
+      @board = Board.new
+      @board.show
+      @game.assign_current_player
+      @game.turn
+      select_position
+      if @game.winner
+        @game.game_over(@game.winner)
+        @board.show
+        exit
+      elsif @game.turn == 9
+        @game.game_over(nil)
+        @board.show
+        exit
+      end
+    end
     # while @game.turn_count <= 9 || @game.win
+  end
+
+  def select_position
+    puts "#{@game.assign_current_player.name}, select a position 1-9:"
+    position = gets.chomp.to_i - 1
+    if @game.valid_move?(position)
+      @game.move(position)
+    else
+      puts 'Invalid move, please enter a valid position'
+      select_position
+    end
   end
 end
 
