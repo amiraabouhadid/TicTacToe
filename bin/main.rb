@@ -1,4 +1,5 @@
 #!/usr/bin/env ruby
+
 class Game
   def initialize
     puts 'Welcome to Tic Tac Toe'
