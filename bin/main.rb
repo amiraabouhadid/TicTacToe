@@ -53,7 +53,7 @@ class Game
                       when @player2
                         @player1
                       else
-                        @player1
+                        [@player1, @player2].sample
                       end
   end
 
