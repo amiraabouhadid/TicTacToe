@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
+require_relative '../lib/player'
+require_relative '../lib/game'
+require_relative '../lib/board'
+
 class TicGame
   def initialize
     @board = Board.new
