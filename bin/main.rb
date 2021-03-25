@@ -2,7 +2,7 @@
 
 class Game
   def initialize
-    puts 'Welcome to Tic Tac Toe'
+    puts 'Welcome to Ruby\'s Tic Tac Toe'
     player1 = Player.new(name('X'))
     player2 = Player.new(name('O'))
     @game = Game.new(player1, player2)
