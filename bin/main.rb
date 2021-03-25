@@ -18,7 +18,7 @@ class Game
 
   def game_round
     loop do
-      @game.current_player
+      puts "It's #{@game.current_player}'s turn!'"
       puts @game.turn
       puts @game.board
       player_input
