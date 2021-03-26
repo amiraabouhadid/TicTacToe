@@ -19,7 +19,20 @@ We were asked to create a Tic-Tac-Toe game. You can find more information on the
 - When either player wins or it's a tie, GAME OVER is displayed and the game is reset.
 
 ## Getting Started
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running follow these simple example steps:
+- Clone the repository as indicated by Setup section below
+- In the local directory in which this repository is cloned, enter in the terminal or text-editor console: ./bin/main.rb. This will start the game in your console.
+- Enter player 1's name when prompted
+- Enter player 2's name when prompted
+- The token of each player ('X' or 'O') will be displayed
+- When prompted, enter a digit 1-9 to indicate the position at which you want to place your token.
+- Observe as the game board fills up with your tokens
+- Play until a player wins or it is a TIE
+- To replay: re-enter ./bin/main.rb in the terminal/console.
+- Enjoy
+
+## Game Rules
+- Do not enter strings instead of integers when asked to enter the position you would like to place your token in. 
 
 ### Prerequisites
 - Text editor
