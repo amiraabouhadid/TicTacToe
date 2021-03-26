@@ -24,8 +24,12 @@ To get a local copy up and running follow these simple example steps:
 - In the local directory in which this repository is cloned, enter in the terminal or text-editor console: ./bin/main.rb. This will start the game in your console.
 - Enter player 1's name when prompted
 - Enter player 2's name when prompted
-- Enter a digit 1-9 when prompted.
-- Enjoy.
+- The token of each player ('X' or 'O') will be displayed
+- When prompted, enter a digit 1-9 to indicate the position at which you want to place your token.
+- Observe as the game board fills up with your tokens
+- Play until a player wins or it is a TIE
+- To replay: re-enter ./bin/main.rb in the terminal/console.
+- Enjoy
 
 ### Prerequisites
 - Text editor
