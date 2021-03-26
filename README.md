@@ -31,6 +31,9 @@ To get a local copy up and running follow these simple example steps:
 - To replay: re-enter ./bin/main.rb in the terminal/console.
 - Enjoy
 
+## Game Rules
+- Do not enter strings instead of integers when asked to enter the position you would like to place your token in. 
+
 ### Prerequisites
 - Text editor
 - GitHub
