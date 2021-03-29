@@ -39,6 +39,9 @@ To get a local copy up and running follow these simple example steps:
 - GitHub
 - Git
 
+### Rspec
+- To run the tests in the main_rspec.rb file run rspec in the terminal.
+
 ### Setup
 Clone repository from github to your local drive by following these steps:
 - Go to the main page of the repository
