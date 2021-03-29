@@ -1,6 +1,7 @@
 require_relative '../lib/player'
 require_relative '../lib/game'
 require_relative '../lib/board'
+require_relative '../bin/main'
 
 player1 = Player.new('amira')
 player2 = Player.new('omar')
@@ -26,6 +27,12 @@ describe Game do
       expect(game.game_over(player2)).to eql("#{current_player.name} wins, GAME OVER")
     end
   end
+
+  describe '#assign_current_player' do
+    it 'Assigns current player' do
+      expect(game.current_player).to eq(player1).or(eq(player2))
+    end
+  end
 end
 
 describe Board do
@@ -39,6 +46,15 @@ describe Board do
         "| 7 | 8 | 9 |\n"\
         '+---+---+---+'
       expect(board.show).to eql(initial_board)
+    end
+  end
+end
+
+describe TicGame do
+  describe '#name' do
+    it 'returns player names as string' do
+      expect(player1.name).to eq('amira')
+      expect(player2.name).to eq('omar')
     end
   end
 end
