@@ -62,5 +62,3 @@ class TicGame
     end
   end
 end
-
-TicGame.new
