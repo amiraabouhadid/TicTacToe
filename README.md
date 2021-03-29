@@ -68,12 +68,6 @@ Clone repository from github to your local drive by following these steps:
 - LinkedIn: [amira-abouhadid](https://linkedin.com/amira-abouhadid)
 
 
- **Zil Norvilis**
-
-- GitHub: [@zilton7](https://github.com/zilton7)
-- Twitter: [@devnor7](https://twitter.com/devnor7)
-- LinkedIn: [zil-norvilis](https://www.linkedin.com/in/zil-norvilis)
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
