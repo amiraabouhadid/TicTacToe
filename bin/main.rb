@@ -5,7 +5,6 @@ require_relative '../lib/board'
 
 class TicGame
   def initialize
-    @board = Board.new
     puts @board.show
     puts 'Welcome to Ruby\'s Tic Tac Toe!'
     player1 = Player.new(name('X'))
@@ -29,7 +28,6 @@ class TicGame
 
   def game_round
     loop do
-      @board = Board.new
       puts @game.board_update
       @game.assign_current_player
       puts @game.turn
@@ -62,5 +60,3 @@ class TicGame
     end
   end
 end
-
-TicGame.new
